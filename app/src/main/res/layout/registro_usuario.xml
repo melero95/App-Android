@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Vista.RegistroActivity"
+    android:background="@color/azul">
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="176dp"
+        android:layout_height="153dp"
+        android:layout_marginTop="60dp"
+        android:src="@drawable/ic_material_oficina"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvLoginUsuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:text="Usuario"
+        android:textColor="@color/amarillo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgLogo" />
+
+    <EditText
+        android:id="@+id/etRegUsuario"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="Introduce tu usuario"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvLoginUsuario"
+        app:layout_constraintWidth_percent="0.7" />
+
+    <!-- Mensaje de error para usuario duplicado -->
+    <TextView
+        android:id="@+id/tvErrorUsuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Este usuario ya existe"
+        android:textColor="#FF0000"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/etRegUsuario"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tvLoginContraseña"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Contraseña"
+        android:textColor="@color/amarillo"
+        app:layout_constraintTop_toBottomOf="@+id/tvErrorUsuario"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/pswRegPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:hint="Introduce tu contraseña"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvLoginContraseña"
+        app:layout_constraintWidth_percent="0.7" />
+
+    <!-- Validación de longitud mínima -->
+    <TextView
+        android:id="@+id/tvErrorPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="La contraseña debe tener al menos 6 caracteres"
+        android:textColor="@color/rojo"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/pswRegPassword"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tvConfirmarLoginContraseña"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Confirmar contraseña"
+        android:textColor="@color/amarillo"
+        app:layout_constraintTop_toBottomOf="@+id/tvErrorPassword"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/pswConfirmarPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:hint="Repite la contraseña"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvConfirmarLoginContraseña"
+        app:layout_constraintWidth_percent="0.7" />
+
+    <!-- Validación de coincidencia de contraseñas -->
+    <TextView
+        android:id="@+id/tvErrorConfirmarPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Las contraseñas no coinciden"
+        android:textColor="@color/rojo"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/pswConfirmarPassword"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btnCrearCuenta"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="@color/amarillo"
+        android:text="Crear Cuenta"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvErrorConfirmarPassword"
+        app:layout_constraintWidth_percent="0.6" />
+
+    <TextView
+        android:id="@+id/separador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="O"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCrearCuenta" />
+
+    <Button
+        android:id="@+id/btnIrAIniciarSesion"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/amarillo"
+        android:text="Iniciar sesión"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/separador"
+        app:layout_constraintWidth_percent="0.6" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

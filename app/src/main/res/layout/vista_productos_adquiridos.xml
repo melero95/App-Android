@@ -1,0 +1,70 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/azul"
+    android:orientation="vertical"
+    android:visibility="visible">
+
+    <!-- Toolbar con saldo -->
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarUsuario"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:backgroundTint="@color/grisOscuro"
+        android:elevation="4dp"
+        android:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
+
+        <!-- TextView para mostrar el saldo -->
+        <TextView
+            android:id="@+id/txtSaldo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginEnd="16dp"
+            android:text="Saldo: 0.00 €"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+        <!-- Botón de retroceso personalizado -->
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- Título o descripción opcional -->
+
+    <TextView
+        android:id="@+id/txtTituloProductosAdquiridos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingVertical="8dp"
+        android:text="Productos Adquiridos"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <!-- ListView para mostrar los productos adquiridos -->
+    <ListView
+        android:id="@+id/listViewProductosAdquiridos"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp"
+        android:paddingHorizontal="8dp" />
+
+    <!-- Botón para navegar a productos disponibles -->
+    <Button
+        android:id="@+id/btnIrAProductosDisponibles"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:backgroundTint="@color/amarillo"
+        android:text="Ver Productos Disponibles"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+
+</LinearLayout>

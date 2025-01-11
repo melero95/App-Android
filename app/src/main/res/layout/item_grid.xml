@@ -1,0 +1,41 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/imgProducto"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_persona"
+        android:contentDescription="Llamar"/>
+
+    <TextView
+        android:id="@+id/nombreProducto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Producto"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/precioProducto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Precio: €"
+        android:gravity="center"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/stockProducto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Stock actual: "
+        android:gravity="center"
+        android:textAlignment="center" />
+
+</LinearLayout>

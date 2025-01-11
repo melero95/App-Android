@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Vista.MainActivity"
+    android:background="@color/azul">
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="180dp"
+        android:layout_height="168dp"
+        android:layout_marginTop="60dp"
+        android:src="@drawable/ic_material_oficina"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvLoginUsuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="Usuario"
+        android:textColor="@color/amarillo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgLogo" />
+
+    <EditText
+        android:id="@+id/etLogUsuario"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Introduce tu usuario"
+        android:inputType="text"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvLoginUsuario"
+        app:layout_constraintWidth_percent="0.7" />
+
+    <!-- Validación de error para el usuario -->
+    <TextView
+        android:id="@+id/tvErrorUsuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Usuario no encontrado"
+        android:textColor="@color/rojo"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/etLogUsuario"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tvLoginContraseña"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Contraseña"
+        android:textColor="@color/amarillo"
+        app:layout_constraintTop_toBottomOf="@+id/tvErrorUsuario"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/pswLogPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:hint="Introduce tu contraseña"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvLoginContraseña"
+        app:layout_constraintWidth_percent="0.7"/>
+
+    <!-- Validación de error para la contraseña -->
+    <TextView
+        android:id="@+id/tvErrorPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Contraseña incorrecta"
+        android:textColor="@color/rojo"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/pswLogPassword"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btnIniciarSesion"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/amarillo"
+        android:text="Iniciar sesión"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@+id/tvErrorPassword"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.6"/>
+
+    <TextView
+        android:id="@+id/separador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="O"
+        android:textStyle="bold|italic"
+        app:layout_constraintTop_toBottomOf="@+id/btnIniciarSesion"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Button
+        android:id="@+id/btnIrACrearCuenta"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/amarillo"
+        android:text="Crear Cuenta"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@+id/separador"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.6"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

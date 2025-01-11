@@ -1,0 +1,10 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme compatible con AppCompat -->
+    <style name="Base.Theme.Ejercicio2_Luis" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/azul</item>
+        <item name="colorPrimaryDark">@color/grisOscuro</item>
+        <item name="colorAccent">@color/amarillo</item>
+    </style>
+
+    <style name="Theme.Ejercicio2_Luis" parent="Base.Theme.Ejercicio2_Luis" />
+</resources>
