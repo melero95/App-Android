@@ -48,7 +48,7 @@ public class Usuario {
         this.saldo = saldo;
     }
 
-    public boolean isEsAdmin() {
+    public boolean isAdmin() {
         return esAdmin;
     }
 

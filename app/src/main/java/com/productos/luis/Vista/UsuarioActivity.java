@@ -154,28 +154,28 @@ public class UsuarioActivity extends AppCompatActivity {
         actualizarSaldo();
     }
 
-private void gestionarCompra(int position) {
-    // Obtener el producto seleccionado
-    Producto productoSeleccionado = controladorProducto.obtenerTodosLosProductos().get(position);
+    private void gestionarCompra(int position) {
+        // Obtener el producto seleccionado
+        Producto productoSeleccionado = controladorProducto.obtenerTodosLosProductos().get(position);
 
-    String nombreProducto = productoSeleccionado.getNombreProducto();
-    double precioProducto = productoSeleccionado.getPrecio();
+        String nombreProducto = productoSeleccionado.getNombreProducto();
+        double precioProducto = productoSeleccionado.getPrecio();
 
-    // Verificar si el usuario tiene saldo suficiente
-    double saldoActual = controladorUsuario.obtenerSaldoActual();
-    if (saldoActual < precioProducto) {
-        Toast.makeText(this, "Saldo insuficiente para comprar este producto", Toast.LENGTH_SHORT).show();
-        return;
-    }
+        // Verificar si el usuario tiene saldo suficiente
+        double saldoActual = controladorUsuario.obtenerSaldoActual();
+        if (saldoActual < precioProducto) {
+            Toast.makeText(this, "Saldo insuficiente para comprar este producto", Toast.LENGTH_SHORT).show();
+            return;
+        }
 
-    // Restar saldo al usuario
-    controladorUsuario.aumentarSaldo(controladorUsuario.getUsuarioActual(), -precioProducto);
+        // Restar saldo al usuario
+        controladorUsuario.aumentarSaldo(controladorUsuario.getUsuarioActual(), -precioProducto);
 
-    // Reducir stock del producto
-    boolean stockActualizado = controladorProducto.reducirStock(nombreProducto, 1);
-    if (!stockActualizado) {
-        Toast.makeText(this, "Error al reducir el stock", Toast.LENGTH_SHORT).show();
-        return;
+        // Reducir stock del producto
+        boolean stockActualizado = controladorProducto.reducirStock(nombreProducto, 1);
+        if (!stockActualizado) {
+            Toast.makeText(this, "Error al reducir el stock", Toast.LENGTH_SHORT).show();
+            return;
     }
 
     // Registrar la compra

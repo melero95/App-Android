@@ -87,6 +87,10 @@ public class MainActivity extends AppCompatActivity {
         Intent intent;
         if (esAdmin) {
             intent = new Intent(this, AdministradorActivity.class);
+            // Pasar datos necesarios a la actividad
+            intent.putExtra("usuario", usuario);
+            startActivity(intent);
+
         } else {
             intent = new Intent(this, UsuarioActivity.class);
 

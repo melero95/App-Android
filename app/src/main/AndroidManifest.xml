@@ -30,7 +30,7 @@
             android:exported="true"
             android:parentActivityName=".Vista.MainActivity"/>
 
-        <!-- Actividad con la cista del usuario -->
+        <!-- Actividad con la vista del usuario -->
         <activity
             android:name=".Vista.UsuarioActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
@@ -38,6 +38,12 @@
         </activity>
 
 
+        <!-- Actividad con la vista del Administrador -->
+        <activity
+            android:name=".Vista.AdministradorActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:parentActivityName=".Vista.MainActivity"> <!-- Actividad padre -->
+        </activity>
 
         <!-- Añadir más actividades según el flujo de la app -->
 
